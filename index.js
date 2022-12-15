@@ -8,7 +8,7 @@ $(function() {
       'display': 'flex',
       'flex-direction': 'row'
     });
-    // Create bars for container based on data
+
     const barContainer = document.createElement("div");
     $(barContainer).addClass('bar-container');
     for (const datum of data) {
@@ -25,13 +25,11 @@ $(function() {
       bar.innerHTML = datum;
       $(barContainer).append(bar);
     }
-
-    // Create y-axis information
-    const yAxis = document.createElement('div');
-    $(yAxis).css({
-      'border-right': '2px solid black',
-      'height': `${$(barContainer).height}`
+    $(barContainer).css({
+      'border-bottom': '2px solid black',
+      'border-left': '2px solid black'
     });
+
     const yAxisText = document.createElement('div');
     yAxisText.innerHTML = 'Y Axis';
     $(yAxisText).css({
@@ -39,10 +37,18 @@ $(function() {
       'text-align': 'center'
     });
 
+    const xAxisText = document.createElement('div');
+    xAxisText.innerHTML = 'X Axis';
+    $(xAxisText).css({
+      'text-align': 'center',
+      'margin-left': '60px'
+    });
+
     $(barInfo).append(yAxisText);
-    $(barInfo).append(yAxis);
     $(barInfo).append(barContainer);
+
     $(element).append(barInfo);
+    $(element).append(xAxisText);
   }
 
   drawBarChart([1, 2, 3, 4], 1, '#barchart-container');
