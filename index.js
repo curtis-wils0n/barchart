@@ -17,7 +17,7 @@ $(function() {
         'font-family': 'system-ui',
         'background-color': 'white',
         'color': 'black',
-        'width': `${(datum / max) * 100}vw`,
+        'width': `${(datum / max) * 80}vw`,
         'text-align': 'center',
         'border': '2px solid black',
         'margin': '2px'
@@ -40,8 +40,9 @@ $(function() {
     const xAxisText = document.createElement('div');
     xAxisText.innerHTML = 'X Axis';
     $(xAxisText).css({
+      'width': `80vw`,
       'text-align': 'center',
-      'margin-left': '60px'
+      'margin-left': '20px'
     });
 
     $(barInfo).append(yAxisText);
