@@ -31,14 +31,15 @@ $(function() {
     });
 
     const yAxisText = document.createElement('div');
-    yAxisText.innerHTML = 'Y Axis';
+    yAxisText.innerHTML = 'Y-Axis';
     $(yAxisText).css({
+      'width': '20px',
       'writing-mode': 'vertical-lr',
       'text-align': 'center'
     });
 
     const xAxisText = document.createElement('div');
-    xAxisText.innerHTML = 'X Axis';
+    xAxisText.innerHTML = 'X-Axis';
     $(xAxisText).css({
       'width': `80vw`,
       'text-align': 'center',
@@ -52,7 +53,7 @@ $(function() {
     $(element).append(xAxisText);
   }
 
-  drawBarChart([1, 2, 3, 4], 1, '#barchart-container');
+  drawBarChart([1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13], 1, '#barchart-container');
 
 });
 
